@@ -6,6 +6,9 @@ let number = 4;
 assert.strictEqual(linearSearch(number, numberList), 3);
 console.log(number + ' found');
 
+number = 12
+assert.strictEqual(linearSearch(number, numberList), -1);
+console.log(number + ' not found');
 
 // Retrun the index otherwise return -1
 function linearSearch(number, numberList) {
