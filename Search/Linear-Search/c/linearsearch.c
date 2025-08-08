@@ -1,24 +1,21 @@
-#include <stdio.h>
-#include <assert.h>
+// implements linear search for integers
 
-int linearSearch(int numList[], int arraySize, int number);
+#include <stdio.h>
 
 int main(void) {
-    int numbers[] = {1,2,3,4,5,6,7,8};
-    int findNum = 4;
+    // An array of integers
+    int numbers[] = {20, 500, 10, 5, 100, 1, 50};
+    int n;
 
-    assert(linearSearch(numbers, sizeof(numbers), findNum) >= 0);
-    printf("Number %d was found\n", findNum);
-    findNum = 12;
-    assert(linearSearch(numbers, sizeof(numbers), findNum) < 0);
-    printf("Number %d not found\n", findNum);
-}
-
-int linearSearch(int numList[], int arraySize, int number) {
-    for (int i = 0; i < arraySize; i++) {
-        if (numList[i] == number) {
-            return number;
+    // Search for number
+    printf("Number: ");
+    scanf("%d", &n);
+    for (int i = 0; i < 7; i++) {
+        if (numbers[i] == n) {
+            printf("Found\n");
+            return 0;
         }
     }
-    return -1;
+    printf("Not found\n");
+    return 1;
 }
